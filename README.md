@@ -4,6 +4,6 @@ This is my personal take on the [Link](https://seanosullivan.co.uk)
 
 ![SynHax Battle](screenshot.png "Alt Text") Continue typing...
 
-## Warning!
+## Caveat
 
 This demo uses corner-shape so a chromium browser is recommended
