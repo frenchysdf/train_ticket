@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train ticket</title>
+  <style>
+    :root {
+      --yellow: #FDD74C;
+      --white: #fff;
+      --gray: #ccc;
+      --gray-200: #eee;
+      --black: #222;
+      --fontFamily: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    body {
+      font-family: var(--fontFamily);
+      color: var(--black);
+    }
+    .ticket_wrapper {
+      display: flex;
+      margin: auto;
+      padding: 2rem;
+      background-color: var(--yellow);
+    }
+    .train_ticket {
+      margin: auto;
+      /* padding: 1rem; */
+      border-radius: 35px;
+      /* border: 1px solid #ccc; */
+    }
+    .train_icon {
+      width: 25px;
+      border: 1px solid var(--black);
+      border-radius: 50rem;
+      background-color: var(--yellow);
+      padding: 5px
+    }
+    .no-border {
+      border: 0;
+    }
+    header {
+      corner-bottom-shape: scoop;
+      border-radius: 35px 35px 10px 10px;
+      border-bottom: 2px dashed #ccc;
+      display: flex;
+      align-items: center;
+      background-color: var(--white);
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 1rem;
+      h1 {
+        font-size: inherit
+      }
+      .ticket_price {
+        margin-inline-start: auto;
+      }
+    }
+
+    .city {
+      font-size: 1.25rem;
+    }
+
+    .faded {
+      color: var(--gray);
+      font-weight: 400;
+    }
+
+    main {
+      corner-top-shape: scoop;
+      border-radius: 10px 10px 0 0;
+      background-color: var(--white);
+      margin: 0;
+      border-bottom: 1px solid var(--gray);
+      h2 {
+        margin: 0;
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    .pill {
+      background-color: var(--yellow);
+      border: 1px solid var(--black);
+      border-radius: 2rem;
+      vertical-align: baseline;
+      justify-content: center;
+    }
+
+    section {
+      padding: 1rem 0.5rem;
+    }
+
+    .bar_code {
+      background-color: var(--gray-200);
+    }
+
+    footer {
+      border-radius: 0 0 35px 35px;
+      background-color: var(--white);
+      text-align: center;
+      padding: 1rem
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+
+    .sp {
+      justify-content: space-between;
+    }
+    .flex-start {
+      align-items: start;
+    }
+    .flex-end {
+      align-items: end;
+    }
+
+    .flex-1 {
+      flex: 1
+    }
+
+    .flex-2 {
+      flex: 2
+    }
+
+    .column {
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticket_wrapper">
+    <div class="train_ticket">
+      <header>
+        <svg class="train_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2C8,2 4,2.5 4,6V15.5A3.5,3.5 0 0,0 7.5,19L6,20.5V21H8.23L10.23,19H14L16,21H18V20.5L16.5,19A3.5,3.5 0 0,0 20,15.5V6C20,2.5 16.42,2 12,2M7.5,17A1.5,1.5 0 0,1 6,15.5A1.5,1.5 0 0,1 7.5,14A1.5,1.5 0 0,1 9,15.5A1.5,1.5 0 0,1 7.5,17M11,10H6V6H11V10M13,10V6H18V10H13M16.5,17A1.5,1.5 0 0,1 15,15.5A1.5,1.5 0 0,1 16.5,14A1.5,1.5 0 0,1 18,15.5A1.5,1.5 0 0,1 16.5,17Z" /></svg>
+        <h1>Swiss Express</h1>
+        <span class="ticket_price">$240</span>
+      </header>
+      <main>
+        <h2 class="ticket_trip--details flex">
+          <span class="from flex column flex-start flex-1">
+            <abbr>ZUR</abbr>
+            <span class="city faded">Zurich</span>
+          </span>
+          <span class="travel_time flex flex-2 pill">
+            <svg class="train_icon no-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2C8,2 4,2.5 4,6V15.5A3.5,3.5 0 0,0 7.5,19L6,20.5V21H8.23L10.23,19H14L16,21H18V20.5L16.5,19A3.5,3.5 0 0,0 20,15.5V6C20,2.5 16.42,2 12,2M7.5,17A1.5,1.5 0 0,1 6,15.5A1.5,1.5 0 0,1 7.5,14A1.5,1.5 0 0,1 9,15.5A1.5,1.5 0 0,1 7.5,17M11,10H6V6H11V10M13,10V6H18V10H13M16.5,17A1.5,1.5 0 0,1 15,15.5A1.5,1.5 0 0,1 16.5,14A1.5,1.5 0 0,1 18,15.5A1.5,1.5 0 0,1 16.5,17Z" /></svg>
+            <time>1h23m</time>
+          </span>
+          <span class="to flex column flex-end flex-1">
+            <abbr>LUZ</abbr>
+            <span class="city faded">Luzern</span>
+        </h2>
+        <section class="ticket_holder flex">
+        <img src="￼" alt="￼" class="ticket_holder--picture flex-1">
+          <span class="ticket_holder--info flex column flex-2">
+            <span class="ticket_holder--name">Guy Hawkins</span>
+            <span class="ticket_holder--email faded">guy.haw@gmail.com</span>
+          </span>
+          <span class="ticket_holder--seat flex column flex-end flex-1">
+            <span class="ticket_holder--seat faded">Seat</span>
+            A2
+          </span>
+        </section>
+        <section class="flex sp">
+          <span class="train_info flex column"><span class="faded">Train No</span>JWI008</span>
+          <span class="train_class--info flex column flex-end">
+            <span class="faded">Class</span>
+            Business
+          </span>
+        </section>
+        <section class="travel_time flex sp">
+          <span class="departure flex column flex-start"><span class="faded">Departure</span>10:30AM</span>
+          <span class="arrival flex column flex-end"><span class="faded">Arrival</span>2:45PM</span>
+        </section>
+        <section class="terminal_gate flex sp">
+          <span class="terminal flex column flex-start"><span class="faded">Terminal</span>6D</span>
+          <span class="gate flex column flex-end"><span class="faded">Gate</span>6D</span>
+        </section>
+        <section class="bar_code">
+          <img src="bar_code.png" alt="">
+        </section>
+      </main>
+      <footer><a href="#">Download Ticket</a></footer>
+    </div>
+  </div>
+</body>
+</html>
