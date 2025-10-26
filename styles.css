@@ -1,0 +1,157 @@
+    :root {
+  --yellow: #FDD74C;
+  --white: #fff;
+  --gray: #9A9778;
+  --gray-200: #ccc;
+  --black: #222;
+  --fontFamily: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--fontFamily);
+  color: var(--black);
+}
+.ticket_wrapper {
+  display: flex;
+  margin: auto;
+  padding: 4rem;
+  background-color: var(--yellow);
+
+}
+.train_ticket {
+  margin: auto;
+  border-radius: 35px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.train_icon {
+  width: 35px;
+  border: 1px solid var(--black);
+  border-radius: 50rem;
+  background-color: var(--yellow);
+  padding: 5px
+}
+.no-border {
+  border: 0;
+}
+header {
+  corner-bottom-shape: scoop;
+  border-radius: 35px 35px 10px 10px;
+  border: 1px solid var(--gray);
+  border-bottom: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  h1 {
+    font-size: inherit;
+    margin-left: 0.5rem;
+  }
+  .ticket_price {
+    margin-inline-start: auto;
+  }
+}
+
+.city {
+  font-size: 1.25rem;
+}
+
+.faded {
+  color: var(--gray);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-block: 0.25rem;
+}
+
+main {
+  corner-top-shape: scoop;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--white);
+  margin: 0;
+  border: 1px solid var(--gray);
+  border-top: 0;
+  h2 {
+    margin: 0;
+    padding: 1rem;
+  }
+}
+
+.pill {
+  background-color: var(--yellow);
+  border: 1px solid var(--black);
+  border-radius: 2rem;
+  vertical-align: baseline;
+  justify-content: center;
+}
+
+.ticket_holder--picture {
+  margin-right: 1rem;
+}
+
+section {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.bar_code {
+  background-color: var(--gray);
+}
+
+footer {
+  border: 1px solid var(--gray-200);
+  border-radius: 0 0 35px 35px;
+  background-color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+  }
+}
+
+figcaption {
+  padding: 2rem 1rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.sp {
+  justify-content: space-between;
+}
+.flex-start {
+  align-items: start;
+}
+.flex-end {
+  align-items: end;
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.flex-2 {
+  flex: 2
+}
+
+.column {
+  flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .ticket_wrapper {
+    padding: 0.5rem;
+  }
+    attributes
+}
